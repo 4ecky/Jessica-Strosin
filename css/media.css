@@ -226,15 +226,20 @@
     padding-top: 200px;
     transition: all .2s linear;
   }
-
-  .header__menu-link {
-    display: flex;
+  .header__menu-list{
+    flex-direction: column;
     justify-content: center;
+  }
+  .header__menu-item{
+    margin-right: 0;
+    margin: 0 auto 80px;
+    display: inline-block;
+  }
+  .header__menu-link {
     font-size: 2.777em;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--white);
-    margin-right: 0;
   }
 
   .header__menu-link:active {
