@@ -206,8 +206,8 @@
 
   .header__close-menu._active {
     display: block;
-    top: 65%;
-    right: 47%;
+    top: 70%;
+    right: 45%;
   }
 
   .header__close-menu:before,
@@ -239,12 +239,12 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .7);
     z-index: 10;
-    padding: 200px 0 0 0;
     transition: all .2s linear;
   }
 
   .header__menu._active {
     top: 0;
+    padding-top: 200px;
     transition: all .2s linear;
   }
 
@@ -460,6 +460,18 @@
 }
 
 @media (max-width: 375px) {
+  /* ============HEADER */
+
+  .header__menu._active {
+    padding-top: 150px;
+  }
+
+  .header__close-menu._active {
+    top: 72%;
+  }
+
+  /* ============POP-UP */
+
   .pop-up__body {
     padding: 10px 10px;
   }
@@ -484,6 +496,11 @@
 }
 
 @media (max-width: 320px) {
+
+  .header__close-menu._active {
+    top: 67%;
+  }
+
   .jessica-strosin__title {
     font-size: calc(2.3em + (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
   }
