@@ -1,0 +1,527 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+
+  /* ============TRUST */
+  .trust__items {
+    justify-content: center;
+  }
+
+  .trust__item:not(:last-child) {
+    margin-right: 2em;
+  }
+
+  .trust__item {
+    margin-bottom: 2em;
+  }
+
+  .trust__item-img {
+    object-fit: cover;
+  }
+
+  /* ============STEPS */
+  .steps__subsc {
+    font-size: .88888em;
+  }
+}
+
+/* ============CAREERS */
+.careers__columns {
+  justify-content: space-around;
+}
+
+@media (max-width:992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .header__inner {
+    padding-top: 2.8333em;
+  }
+
+  /* ==================== */
+  .jessica-strosin__inner {
+    justify-content: center;
+    margin: 1em auto 3em;
+  }
+
+  .jessica-strosin__text {
+    margin-right: 0;
+  }
+
+  .jessica-strosin__suptitle {
+    display: none;
+  }
+
+  .jessica-strosin__subsc {
+    text-align: center;
+    max-width: 33.722em;
+  }
+
+  .jessica-strosin__buttons {
+    text-align: center;
+  }
+
+  .jessica-strosin__quote {
+    text-align: center;
+  }
+
+  .jessica-strosin__image {
+    margin-top: 1.666em;
+  }
+
+  .jessica-strosin__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* ============PROJECTS */
+  .title {
+    margin: 0 auto 1.125em;
+  }
+
+  .projects__image {
+    margin-bottom: 4em;
+  }
+
+  .projects__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects__items {
+    margin-left: 0;
+  }
+
+  .projects__item {
+    margin-right: 0;
+  }
+
+  .projects__subsc {
+    font-size: .833333em;
+  }
+
+  .projects__link {
+    font-size: .77777em;
+  }
+
+  /* ============TRUST */
+  .trust__item:not(:last-child) {
+    margin-right: 5em;
+  }
+
+  /* ============GALLERY */
+  .gallery__inner {
+    margin: 3.333em 0 2.333em 0;
+  }
+
+  .gallery__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery__column {
+    order: 2;
+    margin: .666em 0 0 0;
+  }
+
+  .gallery__image--vertical {
+    order: 1;
+  }
+
+  /* ============STEPS */
+  .steps__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .steps__item:not(:last-child) {
+    margin: 0 .5em 2.222em 0;
+  }
+
+  .steps__item:last-child {
+    margin: 0 0 2.222em 0;
+
+  }
+
+  .steps__title {
+    font-size: 1.499em;
+  }
+
+  .steps__subsc {
+    font-size: .83em;
+  }
+
+  /* ============CAREERS */
+  .careers__inner {
+    margin: 6.333333em 0;
+  }
+}
+
+@media (max-width:767px) {
+  .container {
+    max-width: none;
+  }
+
+  /* ============HEADER */
+  .header__inner {
+    padding-top: 2em;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 1;
+  }
+
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    position: absolute;
+    background-color: #3730a3;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+
+  .header__burger:before {
+    top: 0;
+  }
+
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__burger-elem {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    background-color: #3730a3;
+    width: 100%;
+    height: 2px;
+  }
+
+  .header__close-menu._active {
+    display: block;
+    top: 65%;
+    right: 47%;
+  }
+
+  .header__close-menu:before,
+  .header__close-menu:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  .header__close-menu:before {
+    top: 35px;
+    transform: rotate(45deg);
+  }
+
+  .header__close-menu:after {
+    bottom: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10;
+    padding: 200px 0 0 0;
+    transition: all .2s linear;
+  }
+
+  .header__menu._active {
+    top: 0;
+    transition: all .2s linear;
+  }
+
+  .header__menu-link {
+    display: flex;
+    justify-content: center;
+    font-size: 2.777em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-right: 0;
+  }
+
+  .header__menu-link:active {
+    color: var(--indigo-new);
+    transition: all .1s linear;
+    margin: 0 auto;
+  }
+
+  .header__menu-link:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  .button {
+    font-size: calc(.888em + (0.112 + 0.112 * 0.7) * ((100vw - 320px) / 1200));
+  }
+
+  /* ============JESSICA-STROSIN */
+  .jessica-strosin__inner {
+    margin: 2.99em 0;
+  }
+
+  .jessica-strosin__title {
+    font-size: calc(4em - (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
+    text-align: center;
+  }
+
+  .title {
+    font-size: calc(2em + (.866 + 0.866 * 0.7) * ((100vw - 320px) / 1200));
+  }
+
+  /* ============PROJECTS */
+  .projects__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .projects__items-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.7777em;
+  }
+
+  .projects__items-row:not(:last-child) {
+    margin-bottom: 1.7777em;
+  }
+
+  .projects__item:not(:last-child) {
+    margin: 0 0 1.5em 0;
+  }
+
+  .projects__subsc {
+    margin: 1em 0 1.6666em 0;
+  }
+
+  .projects__items-row--last {
+    display: none;
+  }
+
+  /* ============TRUST */
+  .trust__item:not(:last-child) {
+    margin-right: 2em;
+  }
+
+  .trust__inner {
+    padding: 3.555em 0;
+    margin: 2.555em 0 3.555em 0;
+  }
+
+  /* ==========GALLERY */
+  .gallery__inner {
+    margin: 2em 0 2.333em 0;
+  }
+
+  /* ============STEPS */
+  .steps__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .steps__item:nth-child(1) {
+    margin: 0 1.5em 2.222em 0;
+  }
+
+  .steps__item:nth-child(2) {
+    margin: 0 .6em 2.222em 0;
+  }
+
+  .steps__item:nth-child(3) {
+    margin: 0 0 2.222em 0;
+  }
+
+  .steps__title {
+    font-size: 2em;
+  }
+
+  .steps__subsc {
+    font-size: .87em;
+  }
+
+  .steps__img {
+    max-width: 100%;
+  }
+
+  /* ============CAREERS */
+  .careers__inner {
+    margin: 5.333333em 0;
+  }
+
+  .careers__columns {
+    justify-content: space-around;
+  }
+
+  .careers__item {
+    font-size: .833em;
+  }
+
+  .careers__item--none {
+    display: none;
+  }
+
+  .careers__column--years {
+    display: none;
+  }
+
+  .careers__column--position {
+    text-align: right;
+  }
+
+  /* ============FOOTER */
+  .footer__inner {
+    padding: 2.1111em;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__inner {
+    padding-top: 1.2em;
+  }
+
+  .header__logo {
+    font-size: calc(.9222em + (.4111 + .4111 * .7) * ((100vw - 320px) / 1200));
+  }
+
+  .button__header {
+    display: none;
+  }
+
+  .header__menu-link {
+    margin-right: 0;
+  }
+
+  .button {
+    padding: 0.4em 1.6em;
+  }
+
+  .jessica-strosin__inner {
+    margin: .99em 0;
+  }
+
+  .jessica-strosin__title {
+    font-size: calc(2.3em + (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
+  }
+
+  /* ============TRUST */
+  .trust__item:not(:last-child) {
+    margin: 0 1.55em 2.1em 0;
+  }
+
+  /* ============GALLERY */
+  .gallery__inner {
+    margin: 2em 0 2em 0;
+  }
+
+  .gallery__column {
+    margin: .5em 0 0 0;
+  }
+
+  .gallery__image--column:not(:last-child) {
+    margin-bottom: .5em;
+  }
+
+  .gallery__row {
+    margin-bottom: .5em;
+  }
+
+  .gallery__about {
+    padding: 1em 0 1em 1.3em;
+  }
+
+  .gallery__title-link:after {
+    font-size: calc(24px + (4 + 4 * .7) * ((100vw * 320px) / 1269));
+  }
+
+  /* ============STEPS */
+  .steps__title {
+    font-size: calc(1.555em + (1.07138 + 1.07138 * .7) * ((100vw - 320px) / 1269));
+  }
+
+  /* ============FOOTER */
+}
+
+@media (max-width: 375px) {
+  .pop-up__body {
+    padding: 10px 10px;
+  }
+
+  .pop-up__title {
+    margin-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  .pop-up__input {
+    margin: 15px auto 0;
+    padding: 10px;
+  }
+
+  .pop-up__message {
+    min-height: 150px;
+  }
+
+  .pop-up__button {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .jessica-strosin__title {
+    font-size: calc(2.3em + (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
+  }
+
+  .jessica-strosin__buttons {
+    display: flex;
+  }
+
+  .jessica-strosin__inner {
+    margin: 1.7em 0;
+  }
+
+  .button__jessica-strosin {
+    font-size: 1em;
+  }
+
+  /* ============GALLERY */
+  .gallery__about {
+    padding: 0.7em 0 0.7em 1e
+  }
+
+  /* ============STEPS */
+  .steps__title {
+    font-size: 1.5em;
+    line-height: 1.111em;
+  }
+
+  /* ============CAREERS */
+  .careers__inner {
+    margin: 2.333333em 0;
+  }
+
+  /* ============FOOTER */
+  .footer__inner {
+    padding: 1em;
+  }
+
+  .footer__social {
+    font-size: .7em;
+  }
+}
