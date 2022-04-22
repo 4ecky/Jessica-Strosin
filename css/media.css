@@ -42,12 +42,17 @@
 
   /* ==================== */
   .jessica-strosin__inner {
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     margin: 1em auto 3em;
   }
 
   .jessica-strosin__text {
-    margin-right: 0;
+    flex: 0 1 100%;
+    margin: 0 auto;
+    text-align: center;
+    order: 2;
   }
 
   .jessica-strosin__suptitle {
@@ -69,10 +74,11 @@
 
   .jessica-strosin__image {
     margin-top: 1.666em;
+    order: 1;
   }
 
   .jessica-strosin__img {
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
   }
 
@@ -202,33 +208,6 @@
     background-color: #3730a3;
     width: 100%;
     height: 2px;
-  }
-
-  .header__close-menu._active {
-    display: block;
-    top: 70%;
-    right: 45%;
-  }
-
-  .header__close-menu:before,
-  .header__close-menu:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 2px;
-  }
-
-  .header__close-menu:before {
-    top: 35px;
-    transform: rotate(45deg);
-  }
-
-  .header__close-menu:after {
-    bottom: 10px;
-    transform: rotate(-45deg);
   }
 
   .header__menu {
@@ -463,12 +442,11 @@
   /* ============HEADER */
 
   .header__menu._active {
-    padding-top: 150px;
+    padding-top: 120px;
   }
-
-  .header__close-menu._active {
-    top: 72%;
-  }
+  .header__menu-link:not(:last-child) {
+    margin-bottom: 60px;
+}
 
   /* ============POP-UP */
 
@@ -496,13 +474,9 @@
 }
 
 @media (max-width: 320px) {
-
-  .header__close-menu._active {
-    top: 67%;
-  }
-
+  
   .jessica-strosin__title {
-    font-size: calc(2.3em + (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
+    font-size: calc(2.1em + (1.939 + 1.939 * 0.7) * ((100vw - 320px) / 1200));
   }
 
   .jessica-strosin__buttons {

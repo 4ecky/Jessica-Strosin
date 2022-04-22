@@ -70,15 +70,33 @@ body._lock {
   color: #6b7280;
   margin-right: 80px;
 }
-
-.header__close-menu {
+.header__close-menu{
   display: none;
-  position: absolute;
-  top: -100%;
-  width: 50px;
-  height: 50px;
 }
-
+.header__close-menu._active{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.header__close-menu:before,
+.header__close-menu:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fefefe;
+}
+.header__close-menu:before{
+  top: 10;
+  transform: rotate(-45deg);
+}
+.header__close-menu:after{
+  bottom: 10;
+  transform: rotate(45deg);
+}
 .button {
   font-size: calc(.888em + 0.112 * (100vw / 1200));
   font-weight: 500;
