@@ -1,53 +1,51 @@
-// МЕНЮ БУРГЕР
-const iconMenu = document.querySelector('.header__burger');
-const menuBody = document.querySelector('.header__menu');
-const closeMenu = document.querySelector('.header__close-menu')
-// Меню открывается
-if (iconMenu) {
-  iconMenu.addEventListener('click', function (e) {
-    // iconMenu.classList.toggle('_active');
-    menuBody.classList.toggle('_active');
-    closeMenu.classList.toggle('_active');
-    document.body.classList.toggle('_lock');
+// Меню бургер
+const burger = document.querySelector('.header__burger');
+const menuNav = document.querySelector('.header__menu');
+const navLink = document.querySelectorAll('.header__menu-link');
+const menuClose = document.querySelector('.header__close-menu');
+
+burger.addEventListener('click', mobileMenu);
+
+function mobileMenu(){
+  burger.classList.add('_active');
+  menuNav.classList.add('_open');
+  menuClose.classList.add('_active');
+  document.body.classList.add('_lock');
+};
+
+// при нажатии на X, меню закрывается 
+menuClose.addEventListener('click', closeMenu);
+
+function closeMenu() {
+  burger.classList.toggle('_active');
+  menuNav.classList.toggle('_open');
+  menuClose.classList.remove('_active');
+  document.body.classList.remove('_lock');
+};
+
+// при нажатии на ссылку, меню закрывается
+navLink.forEach(n => n.addEventListener('click', closeMenuForLink));
+
+function closeMenuForLink(){
+  burger.classList.remove('_active');
+  menuNav.classList.remove('_open');
+  menuClose.classList.remove('_active');
+  document.body.classList.remove('_lock');
+};
+
+// плавная прокрутка к разделам
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   });
-
-  // Меню закрывается
-  closeMenu.addEventListener('click', function () {
-    menuBody.classList.remove('_active');
-    closeMenu.classList.toggle('_active');
-    document.body.classList.remove('_lock');
-  });
-
-}
-
-// Переход к разделам
-const menuLinks = document.querySelectorAll('.header__menu-link[data-goto]');
-if (menuLinks.length > 0) {
-  menuLinks.forEach(menu__link => {
-    menu__link.addEventListener('click', onMenuLinkClick);
-  });
-
-  function onMenuLinkClick(e) {
-    const menuLink = e.target;
-    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-      const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-
-      if (iconMenu.classList.contains('_active')) {
-        iconMenu.classList.remove('_active');
-        menuBody.classList.remove('_active');
-        document.body.classList.remove('_lock');
-        closeMenu.classList.remove('_active');
-      }
-
-      window.scrollTo({
-        top: gotoBlockValue,
-        behavior: 'smooth',
-      });
-      e.preventDefault();
-    }
-  }
-}
+};
 
 // POP-UP
 // ловим кнопку

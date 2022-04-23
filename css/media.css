@@ -221,10 +221,11 @@
     transition: all .2s linear;
   }
 
-  .header__menu._active {
+  .header__menu._open {
     top: 0;
     padding-top: 200px;
     transition: all .2s linear;
+    overflow: auto;
   }
   .header__menu-list{
     flex-direction: column;
@@ -446,7 +447,7 @@
 @media (max-width: 375px) {
   /* ============HEADER */
 
-  .header__menu._active {
+  .header__menu._open {
     padding-top: 120px;
   }
   .header__menu-link:not(:last-child) {
